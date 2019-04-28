@@ -1,0 +1,25 @@
+TODO:
+OK-Ladders
+-Make movement less 'floaty'
+-Terrain drawing
+-Terrain generatinon
+-Enemy veriaty
+-animations
+OK-moving platforms
+
+Lower priority:
+-sound and music
+-Upgrades
+-abillities
+-Lighting (2.5D?)
+OK-Background
+
+
+
+
+
+
+Behaviour:
+	Partrol
+	turret
+	rush (old)
