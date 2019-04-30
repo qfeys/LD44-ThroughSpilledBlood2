@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour {
     Transform target;
 
     Rigidbody2D myridg;
+    Collider2D myCol;
     GameObject shieldGO;
 
     static ObjectPool projectileSpawner;
@@ -49,6 +50,7 @@ public class Enemy : MonoBehaviour {
         if (wizardProjectiles == null)
             wizardProjectiles = GameObject.Find("ProjectileSpawner").transform;
         myridg = GetComponent<Rigidbody2D>();
+        myCol = GetComponent<Collider2D>();
         shieldGO = transform.Find("Shield").gameObject;
     }
 
@@ -237,7 +239,7 @@ public class Enemy : MonoBehaviour {
             }
         }
         // climbing ladders
-        if (myridg.IsTouchingLayers(LayerMask.GetMask("Ladder")))
+        if (myCol.IsTouchingLayers(LayerMask.GetMask("Ladder")))
         {
             float v_vel = myridg.velocity.y;
             if (v_vel < 0)

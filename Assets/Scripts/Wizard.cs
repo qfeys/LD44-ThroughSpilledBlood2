@@ -158,7 +158,7 @@ public class Wizard : MonoBehaviour {
             }
         }
 
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0,0,-Camera.main.transform.position.z));
 
         if (Input.GetButtonDown("Fire1"))
         {
